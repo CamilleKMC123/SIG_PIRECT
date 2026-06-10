@@ -57,9 +57,9 @@
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:4
-        }).fitBounds([[5.7815535224935,12.358539412572789],[5.788972880609359,12.372260835539912]]);
+        }).fitBounds([[6.2747616435333216,12.515110458015727],[6.292458531345563,12.544218689381507]]);
         var hash = new L.Hash(map);
-        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        map.attributionControl.setPrefix('<a href="https://github.com/qgis2web/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
         // remove popup's row if "visible-with-data"
         function removeEmptyRowsFromPopupContent(content, feature) {
@@ -314,19 +314,19 @@
         }
 
         function style_TerrainsMGP_2_0(feature) {
-            switch(String(feature.properties['type_de_pa'])) {
+            switch(String(feature.properties['Type de pa'])) {
                 case 'Non payé':
                     return {
                 pane: 'pane_TerrainsMGP_2',
                 opacity: 1,
-                color: 'rgba(111,111,111,1.0)',
+                color: 'rgba(90,94,98,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 2.0, 
+                weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(168,112,0,1.0)',
+                fillColor: 'rgba(169,112,0,1.0)',
                 interactive: true,
             }
                     break;
@@ -334,14 +334,14 @@
                     return {
                 pane: 'pane_TerrainsMGP_2',
                 opacity: 1,
-                color: 'rgba(78,83,87,1.0)',
+                color: 'rgba(109,116,120,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 2.0, 
+                weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(16,158,125,1.0)',
+                fillColor: 'rgba(1,169,160,1.0)',
                 interactive: true,
             }
                     break;
